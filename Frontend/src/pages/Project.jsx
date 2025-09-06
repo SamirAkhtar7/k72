@@ -3,6 +3,7 @@ import ProjectCard from "../components/projects/ProjectCard";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
+import SocialButtons from "../context/SocIcon";
 
 const Project = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -63,13 +64,13 @@ const Project = () => {
               <ProjectCard image1={elem.image1} image2={elem.image2} />
             </div>
           );
-        })} 
+        })}
       </div>
 
       <div className=" flex flex-col justify-between  page2 h-[450px] w-screen bg-black p-5 -mt-4 uppercase">
-        <div className=" flex justify-between p-2  ">
+        {/* <div className=" flex justify-between p-2  ">
           <div className="flex gap-4 justify-center items-center  uppercase ">
-            <div className=" relative flex justify-center items-center font-[font2]  border-4 rounded-full w-[9vw] h-18 pt-4  ">
+            <div className=" relative flex justify-center items-center font-[font2]  border-4 rounded-full w-[9vw] md-[10vw] h-18 md:h-10 pt-4  ">
               <h1 className="text-[4vw] absolute "> fb</h1>
             </div>
             <div className=" relative flex justify-center items-center font-[font2]  border-4 rounded-full w-[9vw] h-18 pt-4  ">
@@ -86,19 +87,21 @@ const Project = () => {
           <div className=" relative flex justify-center items-center font-[font2]  border-4 rounded-full w-[24vw] h-18 pt-4 uppercase  ">
             <h1 className="text-[4vw] absolute ">contact</h1>
           </div>
+        </div> */}
+        <div>
+          <SocialButtons />
         </div>
-        <div className="footer flex justify-between items-center font-[font2]  text-xl ">
-          <div> montreal_</div>
-          <div className="flex gap-4 text-xs bg-[]  ">
+        <div className="footer flex lg:flex-row flex-col gap-1.5  justify-between items-center font-[font2]  text-xl ">
+          <div className=""> montreal_</div>
+          <div className="flex gap-4 lg:gap-5 md:gap-1 md:text-xs text-xs bg-[]  ">
             <div className="hover:text-[#D3FD48] ">privacy policy</div>
             <div className="hover:text-[#D3FD48] "> privacy notics</div>
             <div className="hover:text-[#D3FD48] "> ethics report </div>
-            <div> consent options</div>
+            <div className="hover:text-[#D3FD48]"> consent options</div>
           </div>
-          <div> back to top</div>
+          <div className="hover:text-[#D3FD48]"> back to top</div>
         </div>
       </div>
-      
     </div>
   );
 };
